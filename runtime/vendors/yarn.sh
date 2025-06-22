@@ -1,7 +1,6 @@
-local prefix="$SHULKER_PROMPT_PREFIX $(format-cmd 'yarn')"
-
-if [[ $(command -v yarn) == "" ]]; then
-    npm install -g yarn
-    echo-success "Yarn installed"
+if ! cmd-exists yarn; then
+    yarn() {
+        load-nvm
+        yarn "$@"
+    }
 fi
-trace-add "$prefix Yarn loaded"
