@@ -14,4 +14,4 @@ create-folder "$SHULKER_PROMPT_DIST"
 precompile-repo-root "$SHULKER_PROMPT_DIR" "$SHULKER_PROMPT_DIST"
 compile-precompiled-bundle "$SHULKER_PROMPT_DIST" "$SHULKER_PROMPT_BUNDLE_PATH"
 
-trace-add "$SHULKER_PROMPT_PREFIX ${COLOR_SUCCESS}Shulker CLI Prompt started${STYLE_RESET}"
+trace-add "$SHULKER_PROMPT_PREFIX $(format-success 'Shulker CLI Prompt started')"
